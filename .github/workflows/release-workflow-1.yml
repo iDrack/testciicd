@@ -1,0 +1,17 @@
+name: release-wf-1
+on: push
+jobs:
+    job-1:
+        name: release-wf
+        runs-on: ubuntu-latest
+        steps:
+            - name: get sources
+              uses: actions/checkout@v4
+            - name: install npm
+              run: npm ci
+            - name: build
+              run: npm run build
+            - name: test
+              run: npm run test
+            - name: run
+              run: npm run start
