@@ -8,7 +8,7 @@ jobs:
             - name: get sources
               uses: actions/checkout@v4
             - name: install npm
-              run: npm i
+              run: npm install
             - name: build
               run: npm run build
             - name: Upload le résultat du build
